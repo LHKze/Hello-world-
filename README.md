@@ -1,2 +1,4 @@
 # Hello-world-
-my
+
+
+print 'hello world!'
