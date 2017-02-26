@@ -4,7 +4,7 @@ from adminpage import admin
 from werkzeug.routing import BaseConverter
 app = Flask(__name__)
 
-
+#--------------------here-----------------------------
 class RegexConverter(BaseConverter):
     def __init__(self, url_map, *items):
         super(RegexConverter, self).__init__(url_map)
@@ -17,13 +17,7 @@ app.url_map.converters['regex'] = RegexConverter
 @app.route('/user/<regex("[a-z]{3}"):user_id>')
 def user(user_id):
     return 'hello %s' % user_id
-
-@app.route('/t')
-def hello_world():
-    print app.app_context
-    print g
-    return render_template('test.html', t='asdfg', request=request, current_app=current_app)
-
+#---------------------here-------------------------------
 
 @app.template_filter()
 def reverse(s):
