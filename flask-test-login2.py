@@ -13,7 +13,6 @@ def login():
         # password = request.form.get('password')
         session['username'] = username
         session.permanent = True
-        key = request.cookies.get('session')
         return response
 
     else:
