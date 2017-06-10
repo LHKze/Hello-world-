@@ -3,6 +3,7 @@
    hotp,totp是用于身份验证的算法，客户端和服务端事先协商好一个密钥k，用于一次性密码生成，客户端和服务端
    各有一个计数器c，并且事先将计数值同步。验证时，客户端对密钥和计数器的组合使用hmac算法计算一次性密码。
    totp用时间戳作为计算器的值，每30秒跟换一次。
+   主要目的是学习别人的代码风格和思路。
    
    此项目地址：'https://github.com/lepture/otpauth'
    
@@ -148,27 +149,4 @@ if __name__ == "__main__":
     print t.hotp()
     print t.valid_hotp(330810)
     print t.to_uri('hotp', 'label', 'zhang', 4)
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-			
-	
+
